@@ -1,0 +1,15 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="foo" class="com.foobar.Foo" scope="prototype">
+		<constructor-arg name="name" value="Cleopatra" />
+	</bean>
+
+	<bean id="bar" class="com.foobar.Bar">
+		<constructor-arg type="java.lang.String" value="Rohit" />
+		<constructor-arg index="1" value="22" />
+		<property name="foo" autowiring="byName" />
+	</bean>
+</beans>
